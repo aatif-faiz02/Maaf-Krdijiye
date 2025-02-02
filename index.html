@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry 1000 Times</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #fff;
+            color: #ff4f72;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff4f72;
+            color: white;
+        }
+
+        .message-box {
+            margin-top: 20px;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .sorry-message {
+            font-size: 1rem;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h6{
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>I'm Sorry 😔</h1>
+        <p>Dear Shawty, I truly regret what happened. Please forgive me.</p>
+        <button onclick="saySorry()">Please Click Here</button>
+
+        <h6>~From Aatif Faiz</h6>
+        <div class="message-box" id="messageBox"></div>
+    </div>
+
+    <script>
+        function saySorry() {
+            let messageBox = document.getElementById("messageBox");
+            messageBox.innerHTML = "";
+            for (let i = 1; i <= 1000; i++) {
+                let p = document.createElement("p");
+                p.className = "sorry-message";
+                p.textContent = i + ". I'm really sorry! 🙏 Maaf kr dijiye cutie jiii";
+                messageBox.appendChild(p);
+            }
+        }
+    </script>
+
+</body>
+</html>
